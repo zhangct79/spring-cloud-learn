@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+person:
+  name: zhangct
+  age: 41
+  likes:
+    - games
+    - fitness
+    - study
