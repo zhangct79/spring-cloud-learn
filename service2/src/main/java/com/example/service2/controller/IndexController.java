@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+
 import java.util.List;
 
 @RestController
@@ -39,6 +40,8 @@ public class IndexController {
     @Autowired
     DiscoveryClient client;
 
+    @Autowired
+    HelloController helloController;
 
     @RequestMapping("hello")
     public String hello() {
@@ -47,7 +50,6 @@ public class IndexController {
 
     @RequestMapping("/home")
     public String home() {
-
 //        System.out.println("=========================");
 //        List<ServiceInstance> services = client.getInstances("service1");
 //        for (ServiceInstance instance1:services) {
@@ -57,6 +59,11 @@ public class IndexController {
         System.out.println(loadBalancerClient.choose("service1").getPort());
 
         return this.restTemplate.getForObject("http://service1/hello/", String.class);
+    }
+
+    @RequestMapping("/home1")
+    public String home1() {
+
     }
 
     @RequestMapping("/persons")

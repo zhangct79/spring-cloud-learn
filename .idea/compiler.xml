@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service2" />
-        <module name="eureka-server" />
         <module name="demo" />
+        <module name="eureka-server" />
+        <module name="feign-client" />
+        <module name="service2" />
         <module name="service1" />
+        <module name="service1-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,8 +24,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="feign-client" options="-parameters" />
       <module name="service1" options="-parameters" />
       <module name="service1 (1)" options="-parameters" />
+      <module name="service1-api" options="-parameters" />
       <module name="service2" options="-parameters" />
     </option>
   </component>
