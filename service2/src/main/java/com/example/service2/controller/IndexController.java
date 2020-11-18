@@ -40,8 +40,6 @@ public class IndexController {
     @Autowired
     DiscoveryClient client;
 
-    @Autowired
-    HelloController helloController;
 
     @RequestMapping("hello")
     public String hello() {
@@ -61,10 +59,7 @@ public class IndexController {
         return this.restTemplate.getForObject("http://service1/hello/", String.class);
     }
 
-    @RequestMapping("/home1")
-    public String home1() {
 
-    }
 
     @RequestMapping("/persons")
     public PersonModel persons() {
